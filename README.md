@@ -5,8 +5,8 @@ This is a suitable first-time project for someone just starting out with Laravel
 an MVC framework for PHP. For convenience, Bootstrap is used to style the frontend 
 since the focus of this project is to demonstrate the server side of the code.
 
-This project follows the traditional pattern of web development that involves simple 
-page refreshes for client-server interaction. **This project does not involve AJAX**.
+This project follows the traditional pattern of web development that involves full 
+page reloads for client-server interaction. **This project does not involve AJAX**.
 
 This app uses the authentication scaffolding that comes out of the box with Laravel, 
 and after that we focus on customizing the routing file, the controllers, the models and 
@@ -17,7 +17,7 @@ functionality of the app verifies both authentication and authorization at every
 1. An understanding of basic frontend technologies like HTML and CSS.
 1. An understanding of the basics of vanilla PHP.
 1. An installation of a development web server like XAMPP.
-1. An installation of a Composer, a dependency manager for PHP.
+1. An installation of Composer, a dependency manager for PHP.
 1. An understanding of the MVC pattern, which stands for Model, View, Controller.
 1. Finally, an installation of Laravel.
 
