@@ -21,4 +21,4 @@ functionality of the app verifies both authentication and authorization at every
 1. An understanding of the MVC pattern, which stands for Model, View, Controller.
 1. Finally, an installation of Laravel.
 
-The Laravel docs that pertain to this project can be found at [here](https://laravel.com/docs/4.8 "Laravel 5.8 documentation").
+The Laravel docs that pertain to this project can be found at [here](https://laravel.com/docs/5.8 "Laravel 5.8 documentation").
