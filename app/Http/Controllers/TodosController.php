@@ -18,7 +18,7 @@ class TodosController extends Controller
     {
         $project = Project::findOrFail($id);
         abort_unless($project->user_id == auth()->user()->id, 403);
-        $todos = $project->todos()->get()->sortBy('completed');
+        $todos = $project->todos->sortBy('completed');
         return view('todos.index')->with('project', $project)->with('todos', $todos);
     }
 
@@ -67,7 +67,7 @@ class TodosController extends Controller
     {
         $todo = Todo::findOrFail($id);
         abort_unless($todo->user_id == auth()->user()->id, 403);
-        $project = $todo->project()->firstOrFail();
+        $project = $todo->project;
         abort_unless($project->user_id == auth()->user()->id, 403);
         return view('todos.show')->with([
             'todo' => $todo,
@@ -85,7 +85,7 @@ class TodosController extends Controller
     {
         $todo = Todo::findOrFail($id);
         abort_unless($todo->user_id == auth()->user()->id, 403);
-        $project = $todo->project()->firstOrFail();
+        $project = $todo->project;
         abort_unless($project->user_id == auth()->user()->id, 403);
         return view('todos.edit')->with([
             'todo' => $todo,

@@ -110,13 +110,10 @@ class ProjectsController extends Controller
     {
         $project = Project::findOrFail($request->id);
         abort_unless($project->user_id == auth()->user()->id, 403);
-        $todos = $project->todos()->get();
+        $todos = $project->todos;
         foreach($todos as $todo)
         {
-            if($todo)
-            {
-                $todo->delete();
-            }
+            $todo->delete();
         }
         $project->delete();
         return redirect('/projects');
